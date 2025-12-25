@@ -1,11 +1,10 @@
-/* reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* layout: make body full height and column so footer can sit at bottom */
 body {
     min-height: 100vh;
     display: flex;
@@ -15,12 +14,11 @@ body {
     background: #fff;
 }
 
-/* main area grows to take available space */
 main {
     flex: 1;
 }
 
-/* header */
+/* Header */
 header {
     display: flex;
     align-items: center;
@@ -34,7 +32,7 @@ header {
     width: 140px;
 }
 
-/* hamburger menu */
+/* Hamburger menu */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -54,7 +52,6 @@ header {
     transition: all 0.3s ease;
 }
 
-/* hamburger animation when active */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
 }
@@ -67,12 +64,11 @@ header {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* nav */
+/* Nav */
 .header_nav {
     display: flex;
     gap: 2rem;
 }
-
 
 .header_nav a {
     text-decoration: none;
@@ -92,7 +88,7 @@ header {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 
-/* header buttons */
+/* Header buttons */
 .header_btns a {
     padding: 10px 16px;
     font-family: "Outfit", sans-serif;
@@ -122,115 +118,148 @@ header {
     background-color: #2d4ebd;
 }
 
-/* hero */
+/* Hero */
 .hero {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
     background: linear-gradient(to right, #3A67DE 60%, #1F3878);
+    padding: 100px 20px;
+    text-align: center;
     color: white;
-    padding: 60px 20px;
-    gap: 24px;
-    min-height: 35vh;
 }
 
-.hero_title {
+.hero h1 {
     font-family: "Raleway", sans-serif;
-    font-size: 36px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
 }
 
-.hero_text {
+.hero p {
     font-family: "Merriweather", serif;
     font-size: 18px;
     line-height: 1.6;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
-/* button in hero */
-.create_btn {
-    font-family: "Outfit", sans-serif;
-    color: #3A67DE;
-    background-color: white;
-    text-decoration: none;
-    padding: 14px 26px;
-    border-radius: 100px;
-    font-weight: 700;
-    font-size: 16px;
-    display: inline-block;
+/* Contact Section */
+.contact-wrapper {
+    max-width: 1200px;
+    margin: -60px auto 80px;
+    padding: 0 20px;
 }
 
-.create_btn:hover {
-    background-color: #f2f2f2;
+.contact-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
 }
 
-/* services */
-.services {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 1rem;
-}
-
-.services span {
-    font-family: "Outfit", sans-serif;
-    font-size: 12px;
-    color: #3A67DE;
-}
-
-.services h2 {
-    font-family: "Outfit", sans-serif;
+/* Contact Info */
+.contact-info h2 {
+    font-family: "Raleway", sans-serif;
     font-size: 28px;
-    color: black;
-    font-weight: 700;
-    margin-top: 8px;
+    color: #1F3878;
+    margin-bottom: 16px;
 }
 
-/* service cards container */
-.services-box {
-    display: flex;
-    flex-grow: 1;
-    gap: 2rem;
-    padding-top: 2rem;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 1rem;
-}
-
-/* individual card */
-.card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    width: 400px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    text-align: center;
-    border: 1px solid grey;
-}
-
-.card-img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin: 0 auto 12px;
-}
-
-.card h3 {
-    font-family: "Outfit", sans-serif;
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.card p {
+.contact-description {
     font-family: "Merriweather", serif;
-    font-size: 12px;
-    line-height: 2;
-    color: grey;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
-/* footer */
+.info-item {
+    margin-bottom: 28px;
+}
+
+.info-item h3 {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    color: #3A67DE;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.info-item p {
+    font-family: "Merriweather", serif;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form-wrapper h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 28px;
+    color: #1F3878;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1F3878;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d5d9e2;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: "Outfit", sans-serif;
+    background: #f9fafc;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3A67DE;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(58, 103, 222, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background: #3A67DE;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 100px;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #2d4ebd;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(58, 103, 222, 0.3);
+}
+
+/* Footer */
 footer {
     background: radial-gradient(circle at 10% 10%, #3A67DE 0%, #1F3878 100%);
     width: 100%;
@@ -244,8 +273,7 @@ footer {
     padding: 0 1rem;
 }
 
-/*respovsive design*/
-
+/* Responsive Design */
 @media (max-width: 1024px) {
     header {
         padding: 15px 1.5rem;
@@ -259,27 +287,21 @@ footer {
         font-size: 16px;
     }
 
-    .hero_title {
-        font-size: 32px;
+    .hero {
+        padding: 80px 20px;
     }
 
-    .hero_text {
-        font-size: 16px;
-        max-width: 700px;
+    .hero h1 {
+        font-size: 42px;
     }
 
-    .services-box {
-        gap: 1.5rem;
-        flex-direction: row;
-
-    }
-
-    .card {
-        width: 320px;
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 40px;
+        gap: 40px;
     }
 }
 
-/* Small tablet (max-width: 768px) */
 @media (max-width: 768px) {
     header {
         flex-wrap: nowrap;
@@ -301,56 +323,42 @@ footer {
     }
 
     .hero {
-        padding: 50px 20px;
-        min-height: 30vh;
+        padding: 70px 20px;
     }
 
-    .hero_title {
-        font-size: 28px;
+    .hero h1 {
+        font-size: 36px;
     }
 
-    .hero_text {
-        font-size: 15px;
-        max-width: 90%;
+    .hero p {
+        font-size: 16px;
     }
 
-    .create_btn {
-        padding: 12px 22px;
-        font-size: 14px;
+    .contact-wrapper {
+        margin-top: -50px;
     }
 
-    .services {
-        padding: 2.5rem 1rem;
+    .contact-container {
+        padding: 35px;
     }
 
-    .services h2 {
+    .contact-info h2,
+    .contact-form-wrapper h2 {
         font-size: 24px;
-    }
-
-    .services-box {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 500px;
     }
 }
 
-/* Mobile (max-width: 640px) */
 @media (max-width: 640px) {
     header {
         position: relative;
         height: 64px;
+        padding: 12px 1rem;
     }
 
-    /* Show hamburger menu */
     .hamburger {
         display: flex;
         order: 1;
-        padding: 10px
+        padding: 10px;
     }
 
     .header_logo {
@@ -371,7 +379,6 @@ footer {
         font-size: 13px;
     }
 
-    /* Hide nav by default on mobile */
     .header_nav {
         position: fixed;
         top: 0;
@@ -390,7 +397,6 @@ footer {
         gap: 1.5rem;
     }
 
-    /* Show nav when active */
     .header_nav.active {
         left: 0;
     }
@@ -402,48 +408,41 @@ footer {
     }
 
     .hero {
-        padding: 40px 15px;
-        min-height: 25vh;
-        gap: 20px;
+        padding: 60px 15px;
     }
 
-    .hero_title {
-        font-size: 24px;
+    .hero h1 {
+        font-size: 30px;
     }
 
-    .hero_text {
+    .hero p {
+        font-size: 15px;
+    }
+
+    .contact-wrapper {
+        margin-top: -40px;
+        padding: 0 16px;
+    }
+
+    .contact-container {
+        padding: 25px;
+    }
+
+    .contact-info h2,
+    .contact-form-wrapper h2 {
+        font-size: 22px;
+    }
+
+    .info-item {
+        margin-bottom: 22px;
+    }
+
+    .info-item h3 {
+        font-size: 16px;
+    }
+
+    .info-item p {
         font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .create_btn {
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-
-    .services {
-        padding: 2rem 0.8rem;
-    }
-
-    .services span {
-        font-size: 11px;
-    }
-
-    .services h2 {
-        font-size: 20px;
-    }
-
-    .card {
-        padding: 20px;
-        max-width: 100%;
-    }
-
-    .card h3 {
-        font-size: 18px;
-    }
-
-    .card p {
-        font-size: 11px;
     }
 
     footer {
